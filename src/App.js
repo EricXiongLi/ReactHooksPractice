@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import Categories from "./components/Categories";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import Newsletter from "./components/Newsletter";
+import ProductsList from "./components/ProductsList";
 
-function App() {
+const Container = styled.div`
+  font-family: "Urbanist", sans-serif;
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Container>
+        <Header />
+        <Navbar />
+        <Categories />
+        <Newsletter />
+        <ProductsList />
+      </Container>
+    </React.Fragment>
   );
-}
+};
 
 export default App;
