@@ -1,27 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-import Categories from "./components/Categories";
-import Header from "./components/Header";
-import Navbar from "./components/Navbar";
-import Newsletter from "./components/Newsletter";
-import ProductsList from "./components/ProductsList";
+import CallbackComponent from "./components/CallbackComponent";
+import Effect from "./components/Effect";
+import MemoComponent from "./components/MemoComponent";
+import ReducerComponent from "./components/ReducerComponent";
+import RefComponent from "./components/RefComponent";
 
 const Container = styled.div`
   font-family: "Urbanist", sans-serif;
 `;
+export const numberContext = React.createContext({
+  name: "xiongli",
+  age: 17,
+});
 
 const App = () => {
   return (
     <React.Fragment>
-      <Container>
-        <Header />
-        <Navbar />
-        <Categories />
-        <Newsletter />
-        <ProductsList />
-      </Container>
+      <Effect />
+      <RefComponent />
+      <ReducerComponent />
+      <MemoComponent />
+      <CallbackComponent />
     </React.Fragment>
   );
 };
+
 
 export default App;
